@@ -59,8 +59,11 @@ main(void)
                 }
         }
 
-        had_visited[santa_x][santa_y] = true;
-        had_visited[robo_x][robo_y] = true;
+        if(turn == SANTA) {
+            had_visited[santa_x][santa_y] = true;
+        } else {
+            had_visited[robo_x][robo_y] = true;
+        }
 
         turn *= -1;
     }
